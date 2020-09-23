@@ -1,8 +1,8 @@
 import { SystemColorType, PrimaryColorType, BreakPointValueType, BreakPointType } from './types';
 
 const SystemColor: Record<SystemColorType, Record<PrimaryColorType, string>> = {
-  primaryColor: {
-    primary: '#18F0FF',
+  primary: {
+    main: '#33B3E3',
     black: '#000000',
     blackMist: '#252A2E',
     white: '#FFFFFF',

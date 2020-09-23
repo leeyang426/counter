@@ -9,9 +9,9 @@ export type BreakPointType =
   | 'md_under'
   | 'sm_under'
   | 'xs_under';
-export type SystemColorType = 'primaryColor';
+export type SystemColorType = 'primary';
 export type PrimaryColorType =
-  | 'primary'
+  | 'main'
   | 'black'
   | 'blackMist'
   | 'white'

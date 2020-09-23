@@ -15,10 +15,10 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Button',
-  isPrimary: true,
+  primary: true,
   outline: false,
   disabled: false,
   color: 'primary',
   size: 'md',
-  isRound: false,
+  round: false,
 };
