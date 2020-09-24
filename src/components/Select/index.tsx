@@ -19,16 +19,15 @@ export interface SelectProps {
 
 const { main, white } = SystemColor.primary;
 
-const StyledDropdown = styled(Dropdown)`
+const StyledDropdown = styled(Dropdown)<SelectProps>`
   > button {
-    width: ${(props) => props.width || '200px'};
+    width: ${({ width }) => width || '200px'};
     height: 36px;
     padding: 5px 10px;
     text-align: left;
     background: ${white};
     color: ${main};
     border: 1px solid ${main};
-    font-size: 15px;
     font-weight: 400;
     position: relative;
 
@@ -57,17 +56,17 @@ const StyledDropdown = styled(Dropdown)`
   }
 `;
 
-const StyledDropdownMenu = styled(DropdownMenu)`
-  width: ${(props) => props.width || '200px'};
+const StyledDropdownMenu = styled(DropdownMenu)<SelectProps>`
+  width: ${({ width }) => width || '200px'};
   padding: 3px 0;
   background: ${white};
 `;
 
 const StyledDropdownItem = styled(DropdownItem)`
-  padding: 5px 10px;
+  padding: 6px 10px;
   background: ${white};
   color: ${main};
-  font-size: 15px;
+  font-size: 16px;
 
   &:hover {
     background: ${lighten(0.1, main)};

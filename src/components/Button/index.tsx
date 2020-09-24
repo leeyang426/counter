@@ -21,11 +21,11 @@ const StyledButton = styled(BSButton)`
 
 const { main, white } = SystemColor.primary;
 
-const PrimaryButton = styled(BSButton)`
-  background: ${(props) => (props.outline ? white : main)};
-  color: ${(props) => (props.outline ? main : white)};
+const PrimaryButton = styled(BSButton)<ButtonProps>`
+  background: ${({ outline }) => (outline ? white : main)};
+  color: ${({ outline }) => (outline ? main : white)};
   border-color: ${main};
-  border-radius: ${(props: ButtonProps) => (props.round ? '25px' : '5px')};
+  border-radius: ${({ round }) => (round ? '25px' : '5px')};
 
   &:hover:not([disabled]):not(.disabled) {
     background: ${darken(0.06, main)};
@@ -40,9 +40,9 @@ const PrimaryButton = styled(BSButton)`
   }
 
   &:disabled {
-    background: ${(props) => (props.outline ? white : lighten(0.1, main))};
-    color: ${(props) => (props.outline ? lighten(0.1, main) : white)};
-    border-color: ${(props) => (props.outline ? lighten(0.1, main) : white)};
+    background: ${({ outline }) => (outline ? white : lighten(0.1, main))};
+    color: ${({ outline }) => (outline ? lighten(0.1, main) : white)};
+    border-color: ${({ outline }) => (outline ? lighten(0.1, main) : white)};
   }
 `;
 
